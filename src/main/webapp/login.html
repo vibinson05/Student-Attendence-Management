@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Attendance System</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6CB4EE;
+}
+.container {
+    max-width: 400px;
+    margin-top: 80px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+h2 { color: #007BFF; text-align: center; }
+.btn-primary { background-color: #007BFF; border: none; }
+.btn-primary:hover { background-color: #0056b3; }
+.form-control { margin-bottom: 15px; }
+.alert { text-align: center; padding: 10px; }
+.register-link { text-align: center; margin-top: 15px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <div id="message-container"></div>
+
+    <form action="LoginServlet" method="post">
+        <label>Email:</label>
+        <input type="email" name="email" class="form-control" required>
+
+        <label>Password:</label>
+        <input type="password" name="password" class="form-control" required>
+
+        <label>Role:</label>
+        <select name="role" class="form-control" required>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="admin">Admin</option> <!-- ✅ Added Admin Role -->
+        </select>
+
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+        <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+    </form>
+</div>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+let messageContainer = document.getElementById("message-container");
+
+if (urlParams.has('success')) {
+    messageContainer.innerHTML = `<div class="alert alert-success">${urlParams.get('success')}</div>`;
+}
+if (urlParams.has('error')) {
+    messageContainer.innerHTML = `<div class="alert alert-danger">${urlParams.get('error')}</div>`;
+}
+</script>
+
+</body>
+</html>
