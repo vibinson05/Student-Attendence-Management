@@ -41,6 +41,9 @@ The **Student Attendance Management System** is a web-based application develope
 4. **Run the Project:**
    - Deploy the project on **Apache Tomcat**.
    - Access the system via `http://localhost:8080/student-attendance`.
+  
+   ---
+💡 **Developed by Vibinson Raj G** 🚀
 
 
 
