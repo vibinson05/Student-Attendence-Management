@@ -28,7 +28,7 @@ The **Student Attendance Management System** is a web-based application develope
 ## 🏗️ Setup Instructions
 1. **Clone the Repository:**
    
-   git clone https://github.com/yourusername/student-attendance-management.git
+   git clone https://github.com/vibinson05/Student-Attendence-Management.git
   
 2. **Import into Eclipse:**
    - Open Eclipse → File → Import → Existing Projects into Workspace.
